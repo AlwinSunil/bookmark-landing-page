@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" type="image/jpg" href="app/img/favicon.png" />
+    <title>Bookmark landing page</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link href="dist/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="nav-logo-ul" id="nav-logo-nonactive">
+                <li class="nav-logo-li">
+                    <img src="app/img/logo-bookmark.svg" alt="Logo" class="logo">
+                    <img src="app/img/icon-hamburger.svg" alt="Menu" class="hamburger" id="hamburger"
+                        onclick="navbarToggle()">
+                </li>
+            </ul>
+            <ul id="nav-desktop" class="nav-items">
+                <li class="nav-item">Features</li>
+                <li class="nav-item">Pricing</li>
+                <li class="nav-item">Contact </li>
+                <li class="nav-item login-button">Login</li>
+            </ul>
+            <div class="nav-mobile-active" id="nav-mobile-active">
+                <ul>
+                    <li class="nav-logo-li-active">
+                        <img src="app/img/logo-bookmark-nav.svg" alt="Logo" class="logo">
+                        <img src="app/img/icon-close.svg" alt="Menu" class="close" id="close" onclick="navbarClose()">
+                    </li>
+                </ul>
+                <ul id="nav-mobile" class="nav-items">
+                    <li class="nav-item">Features</li>
+                    <li class="nav-item">Pricing</li>
+                    <li class="nav-item border-bottom">Contact </li>
+                    <li class="nav-item login-button">Login</li>
+                </ul>
+                <ul class="social">
+                    <li class="social-icon"><img src="app/img/icon-facebook.svg" alt=""></li>
+                    <li class="social-icon"><img src="app/img/icon-twitter.svg" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-img">
+                <img src="app/img/illustration-hero.svg" alt="">
+            </div>
+            <div class="hero-content">
+                <h2>A Simple Bookmark Manager </h2>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your
+                    sites load instantly. Try it for free. </p>
+            </div>
+            <div class="hero-btn">
+                <button class="btn-browser btn-chrome">Get it on Chrome</button>
+                <button class="btn-browser btn-firefox">Get it on Firefox</button>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="intro">
+                <h2>Features</h2>
+                <p> Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync
+                    between your devices so you can access them on the go. </p>
+            </div>
+            <div class="features-li">
+                <ul>
+                    <li class="features-li-item">Simple Bookmarking</li>
+                    <li class="features-li-item">Speedy Searching</li>
+                    <li class="features-li-item">Easy Sharing</li>
+                </ul>
+            </div>
+            <div class="feature-exp">
+                <img src="app/img/illustration-features-tab-1.svg" alt="tab1">
+                <div class="exp-content">
+                    <h2>Bookmark in one click</h2>
+                    <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
+                        control over how you manage your favourite sites.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download">
+            <div class="download-content">
+                <h2>Download the extension</h2>
+                <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like
+                    us to prioritize. </p>
+            </div>
+            <div class="browsers">
+                <div class="browser chrome">
+                    <img src="app/img/logo-chrome.svg" alt="">
+                    <h4>Add to Chrome</h4>
+                    <p>Minimum version 62</p>
+                    <button class="install-btn">Add & Install Extention</button>
+                </div>
+                <div class="browser firefox">
+                    <img src="app/img/logo-firefox.svg" alt="">
+                    <h4>Add to Firefox</h4>
+                    <p>Minimum version 55</p>
+                    <button class="install-btn">Add & Install Extention</button>
+                </div>
+                <div class="browser opera">
+                    <img src="app/img/logo-opera.svg" alt="">
+                    <h4>Add to Opera</h4>
+                    <p>Minimum version 46</p>
+                    <button class="install-btn">Add & Install Extention</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email List Form -->
+        <section class="email-list">
+            <p>35,000+ already joined </p>
+            <h2>Stay up-to-date with what we’re doing </h2>
+            <form action="">
+                <input type="email" name="email" id="email-list-form" placeholder="Enter your Email address">
+                <button type="submit" class="email-submit-btn">Contact Us</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <section class="footer">
+            <img src="app/img/logo-bookmark-nav.svg" alt="Bookmark">
+            <ul class="footer-items">
+                <li class="footer-item">Features</li>
+                <li class="footer-item">Pricing</li>
+                <li class="footer-item">Contact</li>
+            </ul>
+            <ul class="social">
+                <li class="social-icon-footer"><img src="app/img/icon-facebook.svg" alt=""></li>
+                <li class="social-icon-footer"><img src="app/img/icon-twitter.svg" alt=""></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Watermark -->
+    <p class="watermark"><strong>Created by </strong><a target="_blank" rel="noreferrer"
+            href="https://instagram.com/mr_alwin_">Alwin Sunil</a></p>
+
+    <!-- Loading Wrapper -->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>
