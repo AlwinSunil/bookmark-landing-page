@@ -14,9 +14,15 @@
     <link href="dist/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
+<body  id="body">
+    <!-- Warning Banner -->
+    <div class="warning-banner" id="warning-banner">
+        <p id="warning-banner-p">This website is just a mockup, these services DOESN'T EXIST !!</p>
+        <p onclick="closeWarning()" id="close-button">Close</p>
+    </div>
 
+    <!-- Main Container -->
+    <div class="container" id="container">
         <!-- Navbar -->
         <nav class="navbar">
             <ul class="nav-logo-ul" id="nav-logo-nonactive">
@@ -53,7 +59,7 @@
         </nav>
 
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero border-bottom">
             <div class="hero-img">
                 <img src="app/img/illustration-hero.svg" alt="">
             </div>
@@ -63,13 +69,13 @@
                     sites load instantly. Try it for free. </p>
             </div>
             <div class="hero-btn">
-                <button class="btn-browser btn-chrome">Get it on Chrome</button>
-                <button class="btn-browser btn-firefox">Get it on Firefox</button>
+                <button class="btn-browser btn-chrome" onclick="warning()">Get it on Chrome</button>
+                <button class="btn-browser btn-firefox" onclick="warning()">Get it on Firefox</button>
             </div>
         </section>
 
         <!-- Features -->
-        <section class="features">
+        <section class="features border-bottom">
             <div class="intro">
                 <h2>Features</h2>
                 <p> Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync
@@ -77,17 +83,42 @@
             </div>
             <div class="features-li">
                 <ul>
-                    <li class="features-li-item">Simple Bookmarking</li>
-                    <li class="features-li-item">Speedy Searching</li>
-                    <li class="features-li-item">Easy Sharing</li>
+                    <li class="features-li-item" onclick="checkboxTabOne()">
+                        <label class="features-label"><input type="checkbox" id="feature-tab1-btn" > Simple
+                            Bookmarking</label>
+                    </li>
+                    <li class="features-li-item" onclick="checkboxTabTwo()">
+                        <label class="features-label"><input type="checkbox" id="feature-tab2-btn">Speedy
+                            Searching</label>
+                    </li>
+                    <li class="features-li-item border-bottom" onclick="checkboxTabThree()">
+                        <label class="features-label"><input type="checkbox" id="feature-tab3-btn">Easy
+                            Sharing</label>
+                    </li>
                 </ul>
             </div>
-            <div class="feature-exp">
+            <div class="feature-exp tab-1" id="tab-1">
                 <img src="app/img/illustration-features-tab-1.svg" alt="tab1">
                 <div class="exp-content">
                     <h2>Bookmark in one click</h2>
                     <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
                         control over how you manage your favourite sites.</p>
+                </div>
+            </div>
+            <div class="feature-exp tab-2" id="tab-2">
+                <img src="app/img/illustration-features-tab-2.svg" alt="tab2">
+                <div class="exp-content">
+                    <h2>Intelligent search</h2>
+                    <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl
+                        through all of your bookmarks.</p>
+                </div>
+            </div>
+            <div class="feature-exp tab-3" id="tab-3">
+                <img src="app/img/illustration-features-tab-3.svg" alt="tab3">
+                <div class="exp-content">
+                    <h2> Share your bookmarks</h2>
+                    <p> Easily share your bookmarks and collections with others. Create a shareable link that you can
+                        send at the click of a button. </p>
                 </div>
             </div>
         </section>
@@ -104,19 +135,19 @@
                     <img src="app/img/logo-chrome.svg" alt="">
                     <h4>Add to Chrome</h4>
                     <p>Minimum version 62</p>
-                    <button class="install-btn">Add & Install Extention</button>
+                    <button class="install-btn" onclick="warning()">Add & Install Extention</button>
                 </div>
                 <div class="browser firefox">
                     <img src="app/img/logo-firefox.svg" alt="">
                     <h4>Add to Firefox</h4>
                     <p>Minimum version 55</p>
-                    <button class="install-btn">Add & Install Extention</button>
+                    <button class="install-btn" onclick="warning()">Add & Install Extention</button>
                 </div>
                 <div class="browser opera">
                     <img src="app/img/logo-opera.svg" alt="">
                     <h4>Add to Opera</h4>
                     <p>Minimum version 46</p>
-                    <button class="install-btn">Add & Install Extention</button>
+                    <button class="install-btn" onclick="warning()">Add & Install Extention</button>
                 </div>
             </div>
         </section>
@@ -125,9 +156,9 @@
         <section class="email-list">
             <p>35,000+ already joined </p>
             <h2>Stay up-to-date with what we’re doing </h2>
-            <form action="">
+            <form>
                 <input type="email" name="email" id="email-list-form" placeholder="Enter your Email address">
-                <button type="submit" class="email-submit-btn">Contact Us</button>
+                <button type="submit" class="email-submit-btn" onclick="warning()">Contact Us</button>
             </form>
         </section>
 
@@ -135,13 +166,13 @@
         <section class="footer">
             <img src="app/img/logo-bookmark-nav.svg" alt="Bookmark">
             <ul class="footer-items">
-                <li class="footer-item">Features</li>
-                <li class="footer-item">Pricing</li>
-                <li class="footer-item">Contact</li>
+                <li class="footer-item" onclick="warning()">Features</li>
+                <li class="footer-item" onclick="warning()">Pricing</li>
+                <li class="footer-item" onclick="warning()">Contact</li>
             </ul>
             <ul class="social">
-                <li class="social-icon-footer"><img src="app/img/icon-facebook.svg" alt=""></li>
-                <li class="social-icon-footer"><img src="app/img/icon-twitter.svg" alt=""></li>
+                <li class="social-icon-footer"><a href=""><img src="app/img/icon-facebook.svg" alt=""></a></li>
+                <li class="social-icon-footer"><a href=""><img src="app/img/icon-twitter.svg" alt=""></a></li>
             </ul>
         </section>
 

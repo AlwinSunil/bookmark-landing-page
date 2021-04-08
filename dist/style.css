@@ -6,6 +6,11 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -188,6 +193,59 @@ li {
   }
 }
 
+.warning-banner {
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #dc2626;
+  text-align: center;
+  padding: 0.75rem 2rem;
+  height: auto;
+  transition: all 0.25s linear;
+}
+
+#warning-banner-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  opacity: 100%;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0px;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+#close-button {
+  padding: 0px;
+  padding-top: 0.3rem;
+  display: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: underline !important;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+#close-button:hover {
+  cursor: pointer;
+}
+
 .watermark {
   opacity: 100%;
   font-weight: 400;
@@ -266,7 +324,7 @@ li {
     border-top: 1px solid #9194a1;
   }
   .border-bottom {
-    border-bottom: 1px solid #9194a1;
+    border-bottom: 1px solid #e4e4e4;
   }
   .login-button {
     margin: 1.25rem 2rem;
@@ -287,7 +345,7 @@ li {
     padding: 0rem 0.5rem;
   }
   .hero {
-    padding: 0rem 2rem;
+    padding: 2.5rem 2rem;
   }
   .hero-img img {
     width: 100%;
@@ -318,19 +376,48 @@ li {
     color: #5368df !important;
   }
   .features {
-    margin-top: 3.5rem;
-    padding: 0rem 2rem;
+    padding: 2.5rem 2rem;
+  }
+  .intro P {
+    margin-bottom: 1.5rem;
+  }
+  .features-li-item {
+    border-top: 1px solid #e4e4e4;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  #feature-tab1-btn,
+  #feature-tab2-btn,
+  #feature-tab3-btn {
+    visibility: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
   .feature-exp {
     padding: 2rem 0rem;
   }
   .feature-exp img {
     width: 100%;
-    padding: 1rem 0rem;
+    padding: 1.5rem 0rem;
+  }
+  .features-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #tab-2 {
+    display: none;
+  }
+  #tab-3 {
+    display: none;
   }
   .download {
-    margin-top: 3.5rem;
-    padding: 0rem 2rem;
+    padding: 2.5rem 2rem;
   }
   .browser {
     width: 90%;
@@ -360,7 +447,7 @@ li {
     width: 100%;
   }
   .install-btn {
-    margin-top: 3rem;
+    margin-top: 0.75rem;
     margin-left: auto;
     margin-right: auto;
     width: 97%;
@@ -373,7 +460,6 @@ li {
             box-shadow: 0 0px 1.2px -4px rgba(0, 0, 0, 0.028), 0 0px 2.9px -4px rgba(0, 0, 0, 0.04), 0 0px 5.4px -4px rgba(0, 0, 0, 0.05), 0 0px 9.6px -4px rgba(0, 0, 0, 0.06), 0 0px 18px -4px rgba(0, 0, 0, 0.072), 0 0px 43px -4px rgba(0, 0, 0, 0.1);
   }
   .email-list {
-    margin-top: 3.5rem;
     padding: 3rem 2rem;
     background-color: #5368df;
     display: -webkit-box;
