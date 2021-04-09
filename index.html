@@ -14,7 +14,7 @@
     <link href="dist/style.css" rel="stylesheet">
 </head>
 
-<body  id="body">
+<body id="body">
     <!-- Warning Banner -->
     <div class="warning-banner" id="warning-banner">
         <p id="warning-banner-p">This website is just a mockup, these services DOESN'T EXIST !!</p>
@@ -41,19 +41,19 @@
             <div class="nav-mobile-active" id="nav-mobile-active">
                 <ul>
                     <li class="nav-logo-li-active">
-                        <img src="app/img/logo-bookmark-nav.svg" alt="Logo" class="logo">
+                        <img src="app/img/logo-bookmark-nav.svg" alt="Logo" class="logo" onclick="navbarClose()">
                         <img src="app/img/icon-close.svg" alt="Menu" class="close" id="close" onclick="navbarClose()">
                     </li>
                 </ul>
                 <ul id="nav-mobile" class="nav-items">
-                    <li class="nav-item">Features</li>
-                    <li class="nav-item">Pricing</li>
-                    <li class="nav-item border-bottom">Contact </li>
-                    <li class="nav-item login-button">Login</li>
+                    <li class="nav-item" onclick="navbarClose()">Features</li>
+                    <li class="nav-item" onclick="navbarClose()">Pricing</li>
+                    <li class="nav-item border-bottom" onclick="navbarClose()">Contact </li>
+                    <li class="nav-item login-button" onclick="navbarClose()">Login</li>
                 </ul>
                 <ul class="social">
-                    <li class="social-icon"><img src="app/img/icon-facebook.svg" alt=""></li>
-                    <li class="social-icon"><img src="app/img/icon-twitter.svg" alt=""></li>
+                    <li class="social-icon" onclick="navbarClose()"><img src="app/img/icon-facebook.svg" alt=""></li>
+                    <li class="social-icon" onclick="navbarClose()"><img src="app/img/icon-twitter.svg" alt=""></li>
                 </ul>
             </div>
         </nav>
@@ -63,14 +63,17 @@
             <div class="hero-img">
                 <img src="app/img/illustration-hero.svg" alt="">
             </div>
-            <div class="hero-content">
-                <h2>A Simple Bookmark Manager </h2>
-                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your
-                    sites load instantly. Try it for free. </p>
-            </div>
-            <div class="hero-btn">
-                <button class="btn-browser btn-chrome" onclick="warning()">Get it on Chrome</button>
-                <button class="btn-browser btn-firefox" onclick="warning()">Get it on Firefox</button>
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h2>A Simple Bookmark Manager </h2>
+                    <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see
+                        your
+                        sites load instantly. Try it for free. </p>
+                </div>
+                <div class="hero-btn">
+                    <button class="btn-browser btn-chrome" onclick="warning()">Get it on Chrome</button>
+                    <button class="btn-browser btn-firefox" onclick="warning()">Get it on Firefox</button>
+                </div>
             </div>
         </section>
 
@@ -82,43 +85,55 @@
                     between your devices so you can access them on the go. </p>
             </div>
             <div class="features-li">
-                <ul>
-                    <li class="features-li-item" onclick="checkboxTabOne()">
-                        <label class="features-label"><input type="checkbox" id="feature-tab1-btn" > Simple
+                <ul class="features-ul">
+                    <li class="features-li-item margin-auto-left" onclick="checkboxTabOne()">
+                        <label class="features-label" id="label-tabOne"><input type="checkbox" id="feature-tab1-btn">
+                            Simple
                             Bookmarking</label>
                     </li>
                     <li class="features-li-item" onclick="checkboxTabTwo()">
-                        <label class="features-label"><input type="checkbox" id="feature-tab2-btn">Speedy
+                        <label class="features-label" id="label-tabTwo"><input type="checkbox"
+                                id="feature-tab2-btn">Speedy
                             Searching</label>
                     </li>
-                    <li class="features-li-item border-bottom" onclick="checkboxTabThree()">
-                        <label class="features-label"><input type="checkbox" id="feature-tab3-btn">Easy
+                    <li class="features-li-item border-bottom margin-auto-right" onclick="checkboxTabThree()">
+                        <label class="features-label" id="label-tabThree"><input type="checkbox"
+                                id="feature-tab3-btn">Easy
                             Sharing</label>
                     </li>
                 </ul>
             </div>
             <div class="feature-exp tab-1" id="tab-1">
-                <img src="app/img/illustration-features-tab-1.svg" alt="tab1">
+                <div class="exp-img">
+                    <img src="app/img/illustration-features-tab-1.svg" alt="tab1">
+                </div>
                 <div class="exp-content">
                     <h2>Bookmark in one click</h2>
                     <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
                         control over how you manage your favourite sites.</p>
+                    <button class="btn-feature">More Info</button>
                 </div>
             </div>
             <div class="feature-exp tab-2" id="tab-2">
-                <img src="app/img/illustration-features-tab-2.svg" alt="tab2">
+                <div class="exp-img">
+                    <img src="app/img/illustration-features-tab-2.svg" alt="tab2">
+                </div>
                 <div class="exp-content">
                     <h2>Intelligent search</h2>
                     <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl
                         through all of your bookmarks.</p>
+                    <button class="btn-feature" onclick="warning()">More Info</button>
                 </div>
             </div>
             <div class="feature-exp tab-3" id="tab-3">
-                <img src="app/img/illustration-features-tab-3.svg" alt="tab3">
+                <div class="exp-img">
+                    <img src="app/img/illustration-features-tab-3.svg" alt="tab3">
+                </div>
                 <div class="exp-content">
                     <h2> Share your bookmarks</h2>
                     <p> Easily share your bookmarks and collections with others. Create a shareable link that you can
                         send at the click of a button. </p>
+                    <button class="btn-feature">More Info</button>
                 </div>
             </div>
         </section>
@@ -131,7 +146,7 @@
                     us to prioritize. </p>
             </div>
             <div class="browsers">
-                <div class="browser chrome">
+                <div class="browser chrome margin-auto-left">
                     <img src="app/img/logo-chrome.svg" alt="">
                     <h4>Add to Chrome</h4>
                     <p>Minimum version 62</p>
@@ -143,7 +158,7 @@
                     <p>Minimum version 55</p>
                     <button class="install-btn" onclick="warning()">Add & Install Extention</button>
                 </div>
-                <div class="browser opera">
+                <div class="browser opera margin-auto-right">
                     <img src="app/img/logo-opera.svg" alt="">
                     <h4>Add to Opera</h4>
                     <p>Minimum version 46</p>
@@ -158,20 +173,22 @@
             <h2>Stay up-to-date with what we’re doing </h2>
             <form>
                 <input type="email" name="email" id="email-list-form" placeholder="Enter your Email address">
-                <button type="submit" class="email-submit-btn" onclick="warning()">Contact Us</button>
+                <button class="email-submit-btn" onclick="warning()">Contact Us</button>
             </form>
         </section>
 
         <!-- Footer -->
         <section class="footer">
-            <img src="app/img/logo-bookmark-nav.svg" alt="Bookmark">
+            <div class="footer-logo" onclick="warning()">
+                <img src="app/img/logo-bookmark-nav.svg" alt="Bookmark">
+            </div>
             <ul class="footer-items">
                 <li class="footer-item" onclick="warning()">Features</li>
                 <li class="footer-item" onclick="warning()">Pricing</li>
                 <li class="footer-item" onclick="warning()">Contact</li>
             </ul>
             <ul class="social">
-                <li class="social-icon-footer"><a href=""><img src="app/img/icon-facebook.svg" alt=""></a></li>
+                <li class="social-icon-footer margin-auto-left icon-fb"><a href=""><img src="app/img/icon-facebook.svg" alt=""></a></li>
                 <li class="social-icon-footer"><a href=""><img src="app/img/icon-twitter.svg" alt=""></a></li>
             </ul>
         </section>
